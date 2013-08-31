@@ -5,6 +5,14 @@ $(document).ready(function(){
 
   ytapi.videoList = $("#video-list");
 
-// Testing
-  ytapi.videoList.append("herro");
+// Functions
+  ytapi.fetchApi = function(){
+    var apiLink = "http://gdata.youtube.com/feeds/api/standardfeeds/most_popular?v=2&alt=json";
+    $.getJSON(apiLink, function(data) {
+    console.log(data);
+    });
+  };
+
+  ytapi.fetchApi();
+
 });
