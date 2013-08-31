@@ -14,7 +14,7 @@ $(document).ready(function(){
 
       // for each entry, get its title, log it in console
       $.each(entries, function(i, data){
-        console.log(data);     
+        console.log(data.title.$t);
       
       });
     });
