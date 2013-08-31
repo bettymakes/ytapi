@@ -4,6 +4,7 @@ $(document).ready(function(){
   var ytapi = {}
 
   ytapi.videoList = $("#video-list");
+  ytapi.videoLoadBtn = $("#video-load-btn");
 
 // Functions
   ytapi.fetchApi = function(type){
@@ -25,6 +26,9 @@ $(document).ready(function(){
     });
   };
 
-  ytapi.fetchApi();
+  ytapi.videoLoadBtn.on('click', function(){
+    ytapi.fetchApi();
+  });
+
 
 });
