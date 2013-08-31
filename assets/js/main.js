@@ -15,7 +15,9 @@ $(document).ready(function(){
       // for each entry, get its title, log it in console
       $.each(entries, function(i, data){
         var videoTitle = data.title.$t;
-        console.log(videoTitle);
+
+        
+        ytapi.videoList.append('<li>' + videoTitle + '</li>');
       
       });
     });
