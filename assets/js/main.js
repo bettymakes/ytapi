@@ -9,7 +9,9 @@ $(document).ready(function(){
   ytapi.fetchApi = function(){
     var apiLink = "http://gdata.youtube.com/feeds/api/standardfeeds/most_popular?max-results=5&v=2&alt=json";
     $.getJSON(apiLink, function(data) {
-    console.log(data);
+      var feed = data.feed;
+      var entries = feed.entry;
+      console.log(entries);
     });
   };
 
