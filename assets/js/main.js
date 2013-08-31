@@ -7,7 +7,7 @@ $(document).ready(function(){
 
 // Functions
   ytapi.fetchApi = function(){
-    var apiLink = "http://gdata.youtube.com/feeds/api/standardfeeds/most_popular?v=2&alt=json";
+    var apiLink = "http://gdata.youtube.com/feeds/api/standardfeeds/most_popular?max-results=5&v=2&alt=json";
     $.getJSON(apiLink, function(data) {
     console.log(data);
     });
