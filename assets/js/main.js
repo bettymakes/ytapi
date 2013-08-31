@@ -15,7 +15,9 @@ $(document).ready(function(){
       // for each entry, get its title, log it in console
       $.each(entries, function(i, data){
         var videoTitle = data.title.$t;
+        var videoImage = data.media$group.media$thumbnail[2].url;
 
+        console.log(videoImage);
         
         ytapi.videoList.append('<li>' + videoTitle + '</li>');
       
